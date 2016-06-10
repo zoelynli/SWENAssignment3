@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BAE8CB3E-6F14-45FB-994C-B4B16B453937}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HotelManagementSystem</RootNamespace>
+    <AssemblyName>HotelManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\b_bll.cs" />
+    <Compile Include="BLL\CustomerBLL.cs" />
+    <Compile Include="Boxcs.cs" />
+    <Compile Include="DAL\b_dal.cs" />
+    <Compile Include="DAL\CustomerDAL.cs" />
+    <Compile Include="HotelDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HotelDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CustomerInf.cs" />
+    <Compile Include="SqlHelper\B_sqlhelper.cs" />
+    <Compile Include="SqlHelper\CustomerHelper.cs" />
+    <Compile Include="UserInterface\FrmCustomerInf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\FrmCustomerInf.Designer.cs">
+      <DependentUpon>FrmCustomerInf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\FrmHotelbakePwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\FrmHotelbakePwd.Designer.cs">
+      <DependentUpon>FrmHotelbakePwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\FrmHotelBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\FrmHotelBook.Designer.cs">
+      <DependentUpon>FrmHotelBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\FrmHotelExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\FrmHotelExpense.Designer.cs">
+      <DependentUpon>FrmHotelExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\FrmHotelLoging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\FrmHotelLoging.Designer.cs">
+      <DependentUpon>FrmHotelLoging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\FrmHotelMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\FrmHotelMain.Designer.cs">
+      <DependentUpon>FrmHotelMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\FrmHotelRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\FrmHotelRoom.Designer.cs">
+      <DependentUpon>FrmHotelRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\FrmHotelSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\FrmHotelSP.Designer.cs">
+      <DependentUpon>FrmHotelSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\FrmHotelVip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\FrmHotelVip.Designer.cs">
+      <DependentUpon>FrmHotelVip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\FrmRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\FrmRoom.Designer.cs">
+      <DependentUpon>FrmRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\FrmHotelLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\FrmHotelLogin.Designer.cs">
+      <DependentUpon>FrmHotelLogin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserInterface\FrmCustomerInf.resx">
+      <DependentUpon>FrmCustomerInf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\FrmHotelbakePwd.resx">
+      <DependentUpon>FrmHotelbakePwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\FrmHotelBook.resx">
+      <DependentUpon>FrmHotelBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\FrmHotelExpense.resx">
+      <DependentUpon>FrmHotelExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\FrmHotelLoging.resx">
+      <DependentUpon>FrmHotelLoging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\FrmHotelMain.resx">
+      <DependentUpon>FrmHotelMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\FrmHotelRoom.resx">
+      <DependentUpon>FrmHotelRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\FrmHotelSP.resx">
+      <DependentUpon>FrmHotelSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\FrmHotelVip.resx">
+      <DependentUpon>FrmHotelVip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\FrmRoom.resx">
+      <DependentUpon>FrmRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\FrmHotelLogin.resx">
+      <DependentUpon>FrmHotelLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="bin\Debug\HotelManagementSystem.exe.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\HotelManagementSystem.vshost.exe.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\HotelManagementSystem.vshost.exe.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HotelDataSet.xsc">
+      <DependentUpon>HotelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HotelDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HotelDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HotelDataSet.xss">
+      <DependentUpon>HotelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\HotelManagementSystem.vshost.exe" />
+    <Content Include="Images\Booking.png" />
+    <Content Include="Images\ChangeRoom.png" />
+    <Content Include="Images\emptyroom.png" />
+    <Content Include="Images\extension.png" />
+    <Content Include="Images\Login.png" />
+    <Content Include="Images\OUTroom.png" />
+    <Content Include="Images\System.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
